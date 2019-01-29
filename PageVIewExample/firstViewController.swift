@@ -13,8 +13,9 @@ class firstViewController: UIViewController {
             return
         }
 
-        let firstQuote = QuoteController.getFavoriteQuotes().first ?? ""
-        quoteLabel.text = firstQuote
+        if let firstQuote = QuoteController.getFavoriteQuotes().first {
+            quoteLabel.text = firstQuote
+        }
     }
     
 }
