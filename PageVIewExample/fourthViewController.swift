@@ -7,7 +7,7 @@ class fourthViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let fourthQuote = QuoteController.getFavoriteQuotes()[2]
+        let fourthQuote = QuoteController.getFavoriteQuotes()[3]
         quoteLabel.text = fourthQuote
     }
 
