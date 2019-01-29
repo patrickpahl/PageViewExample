@@ -12,6 +12,11 @@
 		A337BFE02200A90C003791B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A337BFDF2200A90C003791B1 /* Assets.xcassets */; };
 		A337BFE32200A90C003791B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A337BFE12200A90C003791B1 /* LaunchScreen.storyboard */; };
 		A337BFEB2200AA50003791B1 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A337BFEA2200AA50003791B1 /* PageViewController.swift */; };
+		A337BFED2200EA86003791B1 /* firstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A337BFEC2200EA86003791B1 /* firstViewController.swift */; };
+		A337BFEF2200EAA5003791B1 /* secondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A337BFEE2200EAA5003791B1 /* secondViewController.swift */; };
+		A337BFF12200EAB2003791B1 /* thirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A337BFF02200EAB2003791B1 /* thirdViewController.swift */; };
+		A337BFF32200EAC3003791B1 /* fourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A337BFF22200EAC3003791B1 /* fourthViewController.swift */; };
+		A337BFF52200ED22003791B1 /* QuoteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A337BFF42200ED22003791B1 /* QuoteController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +27,11 @@
 		A337BFE22200A90C003791B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A337BFE42200A90C003791B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A337BFEA2200AA50003791B1 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
+		A337BFEC2200EA86003791B1 /* firstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firstViewController.swift; sourceTree = "<group>"; };
+		A337BFEE2200EAA5003791B1 /* secondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = secondViewController.swift; sourceTree = "<group>"; };
+		A337BFF02200EAB2003791B1 /* thirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = thirdViewController.swift; sourceTree = "<group>"; };
+		A337BFF22200EAC3003791B1 /* fourthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fourthViewController.swift; sourceTree = "<group>"; };
+		A337BFF42200ED22003791B1 /* QuoteController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +66,12 @@
 			children = (
 				A337BFD82200A90B003791B1 /* AppDelegate.swift */,
 				A337BFDC2200A90B003791B1 /* Main.storyboard */,
+				A337BFF42200ED22003791B1 /* QuoteController.swift */,
 				A337BFEA2200AA50003791B1 /* PageViewController.swift */,
+				A337BFEC2200EA86003791B1 /* firstViewController.swift */,
+				A337BFEE2200EAA5003791B1 /* secondViewController.swift */,
+				A337BFF02200EAB2003791B1 /* thirdViewController.swift */,
+				A337BFF22200EAC3003791B1 /* fourthViewController.swift */,
 				A337BFDF2200A90C003791B1 /* Assets.xcassets */,
 				A337BFE12200A90C003791B1 /* LaunchScreen.storyboard */,
 				A337BFE42200A90C003791B1 /* Info.plist */,
@@ -135,8 +150,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A337BFF52200ED22003791B1 /* QuoteController.swift in Sources */,
+				A337BFEF2200EAA5003791B1 /* secondViewController.swift in Sources */,
 				A337BFD92200A90B003791B1 /* AppDelegate.swift in Sources */,
+				A337BFF32200EAC3003791B1 /* fourthViewController.swift in Sources */,
+				A337BFF12200EAB2003791B1 /* thirdViewController.swift in Sources */,
 				A337BFEB2200AA50003791B1 /* PageViewController.swift in Sources */,
+				A337BFED2200EA86003791B1 /* firstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -5,12 +5,38 @@ class PageViewController: UIPageViewController, UIPageViewControllerDataSource, 
     // Storyboard: Gave each vc a restorationId of 'firstVC', etc.
     // To show pageview buttons at the bottom, go to the pageVC on the storyboard, Attributes inspector: page spacing 4, transition: scroll
 
+    var quotes = QuoteController.getFavoriteQuotes()
+    lazy var vcArray = [UIViewController]()
+
+/*
     lazy var vcArray: [UIViewController] = {
         return [self.vcInstance(name: "firstVC"),
                 self.vcInstance(name: "secondVC"),
                 self.vcInstance(name: "thirdVC"),
                 self.vcInstance(name: "fourthVC")]
     }()
+*/
+
+    private func setupQuotes() {
+        switch quotes.count {
+        case 3:
+            vcArray.append(vcInstance(name: "firstVC"))
+            vcArray.append(vcInstance(name: "secondVC"))
+            vcArray.append(vcInstance(name: "thirdVC"))
+        case 4:
+            vcArray.append(vcInstance(name: "firstVC"))
+            vcArray.append(vcInstance(name: "secondVC"))
+            vcArray.append(vcInstance(name: "thirdVC"))
+            vcArray.append(vcInstance(name: "fourthVC"))
+        default:
+            vcArray.append(vcInstance(name: "firstVC"))
+            vcArray.append(vcInstance(name: "secondVC"))
+        }
+
+        if let firstVC = vcArray.first {
+            setViewControllers([firstVC], direction: .forward, animated: true, completion: nil)
+        }
+    }
 
     private func vcInstance(name: String) -> UIViewController {
         return UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: name)
@@ -21,23 +47,22 @@ class PageViewController: UIPageViewController, UIPageViewControllerDataSource, 
 
         self.dataSource = self
         self.delegate = self
-        if let firstVC = vcArray.first {
-            setViewControllers([firstVC], direction: .forward, animated: true, completion: nil)
-        }
+
+        setupQuotes()
     }
 
     // This makes the background by the buttons the same color as the selected viewcontroller
-//    override func viewDidLayoutSubviews() {
-//        super.viewDidLayoutSubviews()
-//
-//        for view in self.view.subviews {
-//            if view is UIScrollView {
-//                view.frame = UIScreen.main.bounds
-//            } else if view is UIPageControl {
-//                view.backgroundColor = .clear
-//            }
-//        }
-//    }
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+
+        for view in self.view.subviews {
+            if view is UIScrollView {
+                view.frame = UIScreen.main.bounds
+            } else if view is UIPageControl {
+                view.backgroundColor = .clear
+            }
+        }
+    }
 
     // What comes BEFORE it in the array
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
